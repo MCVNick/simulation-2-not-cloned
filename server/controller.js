@@ -5,8 +5,8 @@ module.exports = {
             .catch(error => res.status(500).send(console.log('O snap something went wrong in the getHouses controller')))
     },
     addHouse: (req, res, next) => {
-        const { name, address, city, state, zipcode } = req.body
-        req.app.get('db').create_house(name, address, city, state, zipcode)
+        const { name, address, city, state, zipcode, image, mortgage, rent } = req.body
+        req.app.get('db').create_house(name, address, city, state, zipcode, image, mortgage, rent)
             .then(house => res.sendStatus(200))
             .catch(error => res.status(500).send(console.log('O snap something went wrong in the addHouse controller')))
     },

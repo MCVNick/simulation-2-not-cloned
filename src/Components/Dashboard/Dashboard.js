@@ -12,7 +12,7 @@ class Dashboard extends Component {
         this.state = {
             listOfHouses: []
         }
-        
+
         this.handleDeleteHouse = this.handleDeleteHouse.bind(this)
     }
 
@@ -42,14 +42,24 @@ class Dashboard extends Component {
         let listOfHouses = this.state.listOfHouses.map((house, index) => {
             return (
                 <div key={index}>
-                    <House handleDeleteHouseFn={this.handleDeleteHouse} id={house.id} name={house.name} address={house.address} city={house.city} state={house.state} zipcode={house.zipcode}/>
+                    <House
+                        handleDeleteHouseFn={this.handleDeleteHouse}
+                        id={house.id} name={house.name}
+                        address={house.address}
+                        city={house.city}
+                        state={house.state}
+                        zipcode={house.zipcode}
+                        image={house.image}
+                        mortgage={house.mortgage}
+                        rent={house.rent}
+                    />
                 </div>
             )
         })
 
         return (
             <div>
-                Dashboard
+                {console.log(this.props.match)}
                 <Link to='/wizard'>
                     <button>Add New Property</button>
                 </Link>

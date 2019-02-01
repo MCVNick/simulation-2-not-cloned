@@ -9,6 +9,21 @@ function House(props) {
             <p>{props.city}</p>
             <p>{props.state}</p>
             <p>{props.zipcode}</p>
+            {
+                props.image ?
+                <p>{props.image}</p> :
+                null
+            }
+            {
+                props.mortgage ?
+                <p>{props.mortgage}</p> :
+                null
+            }
+            {
+                props.rent ?
+                <p>{props.rent}</p> :
+                null
+            }
             <button onClick={() => props.handleDeleteHouseFn(props.id)}>X</button>
         </div>
     )
