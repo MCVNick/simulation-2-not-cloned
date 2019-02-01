@@ -41,7 +41,7 @@ class Dashboard extends Component {
     render() {
         let listOfHouses = this.state.listOfHouses.map((house, index) => {
             return (
-                <div key={index}>
+                <div className='houseParent' key={index}>
                     <House
                         handleDeleteHouseFn={this.handleDeleteHouse}
                         id={house.id} name={house.name}
@@ -58,12 +58,18 @@ class Dashboard extends Component {
         })
 
         return (
-            <div>
-                {console.log(this.props.match)}
-                <Link to='/wizard'>
-                    <button>Add New Property</button>
-                </Link>
-                {listOfHouses}
+            <div className='dashboardParent'>
+                <div className='dashboardHeaderParent'>
+                    {console.log(this.props.match)}
+                    <p className='dashboardHeader'>Dashboard</p>
+                    <Link to='/wizard'>
+                        <button className='dashboardButton'>Add New Property</button>
+                    </Link>
+                </div>
+                <p className='dashboardSubHeader'>Home Listings</p>
+                <div className='dashboardListings'>
+                    {listOfHouses}
+                </div>
             </div>
         )
     }

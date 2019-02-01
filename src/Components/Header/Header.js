@@ -6,7 +6,7 @@ function Header() {
     return (
         <nav className='headerParent'>
             <img className='logo' src={logo} alt='logo' />
-            <div>Houser</div>
+            <div className='headerName'>Houser</div>
         </nav>
     )
 }

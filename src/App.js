@@ -16,7 +16,9 @@ class App extends Component {
         <Router>
           <div className="App">
             <Header />
-            {routes}
+            <main className='mainContent'>
+              {routes}
+            </main>
           </div>
         </Router>
       </Provider>

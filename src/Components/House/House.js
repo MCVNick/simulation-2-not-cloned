@@ -4,27 +4,31 @@ import './House.css'
 function House(props) {
     return (
         <div className='house'>
-            <p>{props.name}</p>
-            <p>{props.address}</p>
-            <p>{props.city}</p>
-            <p>{props.state}</p>
-            <p>{props.zipcode}</p>
             {
                 props.image ?
-                <p>{props.image}</p> :
-                null
+                    <img className='houseItemImage' src={props.image} alt={props.id}/> :
+                    null
             }
-            {
-                props.mortgage ?
-                <p>{props.mortgage}</p> :
-                null
-            }
-            {
-                props.rent ?
-                <p>{props.rent}</p> :
-                null
-            }
-            <button onClick={() => props.handleDeleteHouseFn(props.id)}>X</button>
+            <div className='houseItems1'>
+                <p className='houseContent'>Property Name: {props.name}</p>
+                <p className='houseContent'>Address: {props.address}</p>
+                <p className='houseContent'>City: {props.city}</p>
+                <p className='houseContent'>State: {props.state}</p>
+                <p className='houseContent'>Zip: {props.zipcode}</p>
+            </div>
+            <div className='houseItems2'>
+                {
+                    props.mortgage ?
+                        <div><p className='houseContent'>Monthly Mortgage: {props.mortgage}</p></div> :
+                        null
+                }
+                {
+                    props.rent ?
+                        <div><p className='houseContent'>Desired Rent: {props.rent}</p></div> :
+                        null
+                }
+            </div>
+            <button className='houseDelete' onClick={() => props.handleDeleteHouseFn(props.id)}>X</button>
         </div>
     )
 }

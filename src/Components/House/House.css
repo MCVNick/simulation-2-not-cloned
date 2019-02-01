@@ -1,0 +1,45 @@
+.houseParent {
+    position: relative;
+    background: #dedede;
+    width: 97%;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+}
+
+.houseContent {
+    padding: 5px;
+    margin: 0px 10px;
+}
+
+.houseDelete {
+    padding: 5px;
+    position: absolute;
+    right: 5px;
+}
+
+.house {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.houseItems1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.houseItems2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.houseItemImage {
+    height: 130px;
+    display: flex;
+    margin: 0px 10px;
+}

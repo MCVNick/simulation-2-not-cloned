@@ -1,4 +1,22 @@
 .headerParent {
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
     background-color: #519872;
     display: flex;
+    min-height: 75px;
+}
+
+.logo {
+    height: 40%;
+    margin-left: 40%;
+    margin-right: 10px;
+}
+
+.headerName {
+    color: White;
+    font-size: 200%;
+    font-weight: bold;
 }
